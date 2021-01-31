@@ -31,12 +31,15 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1",
-    "prettier": "2.2.1",
+    "prettier": "^2.2.1",
     "prettier-stylelint": "^0.4.2",
-    "stylelint": "^13.8.0",
+    "stylelint": "^13.9.0",
+    "stylelint-config-airbnb": "^0.0.0",
     "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.18.0"
   },
   "dependencies": {

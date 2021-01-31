@@ -1,14 +1,14 @@
-@import "fonts";
-@import "libs";
-@import "vars";
-@import "media";
-@import "global";
+@import 'fonts';
+@import 'libs';
+@import 'vars';
+@import 'media';
+@import 'global';
 
 .header {
   position: fixed;
-  left: 0;
-  right: 0;
   top: 30px;
+  right: 0;
+  left: 0;
   z-index: 10;
 
   &__inner {
@@ -33,13 +33,13 @@
 
   &__info-btn {
     margin-right: 8px;
-    border: 1px solid #ffffff;
-    border-radius: 3px;
     padding: 6px 28px;
     color: #ffffff;
     background-color: transparent;
-    transition: all 0.3s;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
     cursor: pointer;
+    transition: all 0.3s;
 
     &:hover {
       color: #000000;
@@ -61,12 +61,11 @@
   justify-content: center;
 
   &::before {
-    content: "";
     position: absolute;
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
+    left: 0;
     background: radial-gradient(
       45.97% 54.43% at 50% 45.57%,
       rgba(23, 26, 28, 0) 50.28%,
@@ -76,6 +75,7 @@
       #000000 87.89%
     );
     opacity: 0.4;
+    content: '';
   }
 
   &__inner {
@@ -94,8 +94,8 @@
   }
 
   &__text {
-    margin: 25px 0 35px;
     max-width: 324px;
+    margin: 25px 0 35px;
     text-align: center;
   }
 
@@ -123,8 +123,8 @@
   }
 
   &__text {
-    margin-bottom: 30px;
     max-width: 440px;
+    margin-bottom: 30px;
   }
 
   &__slider-box {
@@ -134,8 +134,8 @@
 
   &__slider-text {
     position: absolute;
-    left: -250px;
     bottom: 30px;
+    left: -250px;
     z-index: 5;
     max-width: 280px;
     font-size: 24px;
@@ -149,13 +149,13 @@
     max-width: 560px;
 
     &::before {
-      content: "";
       position: absolute;
-      right: -17px;
       top: -15px;
-      border: 4px solid #ffffff;
+      right: -17px;
       width: 564px;
       height: 280px;
+      border: 4px solid #ffffff;
+      content: '';
     }
   }
 }
@@ -165,9 +165,9 @@
   right: 0;
   bottom: -54px;
   z-index: 5;
-  border: none;
   padding: 16px 26px;
   background: #ffffff;
+  border: 0;
   cursor: pointer;
 
   svg {
@@ -205,20 +205,20 @@
 
       &::before,
       &::after {
-        content: "";
         position: absolute;
-        background-position: 0 0;
         background-repeat: no-repeat;
+        background-position: 0 0;
+        content: '';
       }
     }
 
     &:first-child {
-      &::before {
+      &:before {
         right: -55px;
         bottom: 77px;
         width: 245px;
         height: 45px;
-        background-image: url("../images/line-1.svg");
+        background-image: url('../images/line-1.svg');
       }
     }
 
@@ -235,7 +235,7 @@
         bottom: 69px;
         width: 100%;
         height: 100%;
-        background-image: url("../images/line-2.svg");
+        background-image: url('../images/line-2.svg');
       }
 
       &::after {
@@ -243,7 +243,7 @@
         bottom: -43px;
         width: 100%;
         height: 100%;
-        background-image: url("../images/line-3.svg");
+        background-image: url('../images/line-3.svg');
       }
 
       &:nth-child(4) {
@@ -265,14 +265,14 @@
     margin-right: 32px;
 
     &::before {
-      content: "";
       position: absolute;
-      right: -12px;
       top: -12px;
+      right: -12px;
       z-index: -1;
-      border: 2px solid #ffffff;
       width: 195px;
       height: 130px;
+      border: 2px solid #ffffff;
+      content: '';
     }
   }
 
@@ -304,17 +304,22 @@
     justify-content: space-between;
   }
 
+  &__item--center {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
   &__box {
     position: relative;
-    margin-top: 10px;
     width: 280px;
+    margin-top: 10px;
 
     &::before {
-      content: "";
       position: absolute;
+      background-repeat: no-repeat;
       background-position: 0 0;
       background-size: contain;
-      background-repeat: no-repeat;
+      content: '';
     }
   }
 
@@ -327,35 +332,35 @@
   }
 
   &__box-1::before {
-    right: -150px;
     top: 15px;
+    right: -150px;
     width: 229px;
     height: 114px;
-    background-image: url("../images/pointer-1.png");
+    background-image: url('../images/pointer-1.png');
   }
 
   &__box-2::before {
-    right: -325px;
     top: -65px;
+    right: -325px;
     width: 346px;
     height: 81px;
-    background-image: url("../images/pointer-2.png");
+    background-image: url('../images/pointer-2.png');
   }
 
   &__box-3::before {
-    left: -310px;
     top: 15px;
+    left: -310px;
     width: 258px;
     height: 103px;
-    background-image: url("../images/pointer-3.png");
+    background-image: url('../images/pointer-3.png');
   }
 
   &__box-4::before {
-    left: -155px;
     top: -75px;
+    left: -155px;
     width: 125px;
     height: 89px;
-    background-image: url("../images/pointer-4.png");
+    background-image: url('../images/pointer-4.png');
   }
 
   &__box-title {
@@ -371,5 +376,11 @@
     line-height: 130%;
 
     @extend %ubuntu-light;
+  }
+}
+
+.questions {
+  &__items {
+    max-width: 757px;
   }
 }
