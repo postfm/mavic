@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "author": "vipfm",
   "license": "ISC",
@@ -18,7 +19,9 @@
     "del": "^6.0.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
@@ -29,7 +32,9 @@
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1",
     "prettier": "2.2.1",
+    "prettier-stylelint": "^0.4.2",
     "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0"
