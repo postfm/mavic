@@ -48,6 +48,7 @@
     "chartjs": "^0.3.24",
     "d3": "^6.3.1",
     "fancybox": "^3.0.1",
+    "fullpage.js": "^3.0.9",
     "highcharts": "^8.2.2",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",

@@ -6,6 +6,6 @@
   ],
   "plugins": ["stylelint-order", "stylelint-scss"],
   "rules": {
-    "max-nesting-depth": [2, { "ignore": ["pseudo-classes"] }]
+    "max-nesting-depth": [3, { "ignore": ["pseudo-classes"] }]
   }
 }

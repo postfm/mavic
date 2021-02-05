@@ -46,6 +46,9 @@
       background-color: #ffffff;
     }
   }
+  &__menu-phone {
+    display: none;
+  }
 
   &__info-phone {
     font-size: 16px;
@@ -54,12 +57,11 @@
     @extend %ubuntu-bold;
   }
 }
+.menu__btn {
+  display: none;
+}
 
 .top {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-
   &::before {
     position: absolute;
     top: 0;
@@ -77,11 +79,18 @@
     opacity: 0.4;
     content: '';
   }
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100vh;
+  }
 
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   &__title {
@@ -96,7 +105,6 @@
   &__text {
     max-width: 324px;
     margin: 25px 0 35px;
-    text-align: center;
   }
 
   &__social-list {
@@ -381,6 +389,192 @@
 
 .questions {
   &__items {
+    position: relative;
     max-width: 757px;
+    &::after {
+      position: absolute;
+      right: -319px;
+      bottom: 30px;
+      width: 319px;
+      height: 125px;
+      content: url(../images/questions-bg.jpg);
+    }
+  }
+
+  &__item {
+    max-width: 690px;
+    margin-bottom: 5px;
+    background: rgba(0, 0, 0, 0.3);
+
+    & > p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item--active {
+    .questions__item-title {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+    .questions__item-text {
+      display: block;
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    padding: 20px 10px 24px 39px;
+    color: rgba(#ffffff, 0.8);
+    font-size: 21px;
+    line-height: 28px;
+    cursor: pointer;
+
+    @extend %ubuntu-medium;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -67px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 67px;
+      height: 72px;
+      background-color: #fff;
+      content: url(../images/accordion-down.png);
+    }
+  }
+  &__item-text {
+    display: none;
+    padding: 0 5px 75px 50px;
+    font-size: 15px;
+    line-height: 150%;
+
+    @extend %ubuntu-light;
   }
 }
+
+.contacts {
+  &__inner {
+    display: flex;
+    padding-left: 56px;
+  }
+  &__info {
+    max-width: 240px;
+    margin-right: 60px;
+  }
+  &__info-box {
+    margin-bottom: 30px;
+  }
+  &__info-title {
+    margin-bottom: 13px;
+    font-size: 21px;
+    line-height: 24px;
+    @extend %ubuntu-bold;
+  }
+
+  &__info-phone,
+  &__info-email {
+    font-size: 15px;
+    line-height: 130%;
+    @extend %ubuntu-light;
+  }
+
+  &__info-phone {
+    margin-bottom: 5px;
+  }
+  &__info-email {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 570px;
+    margin-right: 106px;
+  }
+  &__form-title {
+    margin-bottom: 13px;
+    font-size: 21px;
+    line-height: 24px;
+    @extend %ubuntu-bold;
+  }
+  &__form-text {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 130%;
+    @extend %ubuntu-light;
+  }
+  &__form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &__form-input {
+    width: 49.5%;
+    padding: 15px;
+    color: rgba($color: #ffffff, $alpha: 0.4);
+    font-size: 13px;
+    line-height: 130%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0;
+  }
+  &__form-textarea {
+    width: 100%;
+    min-height: 144px;
+    margin-bottom: 20px;
+    padding: 15px;
+    color: rgba($color: #ffffff, $alpha: 0.4);
+    font-size: 13px;
+    line-height: 130%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0;
+    resize: none;
+  }
+  &__form-btn {
+    padding: 9px 15px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    @extend %ubuntu-bold;
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+  }
+  &__social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__social-item {
+    margin: 14px 0;
+    opacity: 0.5;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+    left: 0;
+    &__copy {
+      font-size: 13px;
+      line-height: 130%;
+      text-align: right;
+      opacity: 0.64;
+    }
+  }
+}
+
+@import 'media';
