@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: #fff;
+  font-size: 17px;
+  line-height: 150%;
+  @extend %ubuntu-light;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-page {
+  position: relative;
+  font-size: 17px;
+  line-height: 150%;
+  background-image: url('../images/page-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  @extend %ubuntu-light;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5e5e57 100%);
+    opacity: 0.15;
+    content: '';
+  }
+  &__wrapper {
+    position: relative;
+    height: 100vh;
+    padding: 74px 0 50px;
+  }
+}
+
+.top {
+  background-image: url('../images/top-bg.jpg');
+}
+
+.title {
+  margin-bottom: 55px;
+  padding-top: 200px;
+  padding-left: 25px;
+  font-size: 44px;
+  line-height: 53px;
+
+  @extend %sf-regular;
+}
+
+.section__btn-scroll {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 13px 0 30px;
+  text-align: center;
+}
